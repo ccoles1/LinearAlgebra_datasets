@@ -1,0 +1,36 @@
+,Rhodopis - Egypt,Saddleslut -Greece,Zezzola (Cenerentola) -- Italy,The Cinder-Wench (La Conz-Senare) Italy,Aschenputtel - Germany,The Little Glass Slipper - France,Jacquette de Boise(Blue Bull) - France,Hearth cat -Portugal,Trembling - Ireland,Ashpitel -Scotland,Rashin-Coatie - Scotland,Rushen Coatie - England,Mjadveig - Iceland,Whip in the Ashes -Denmark,Cindergirl -Sweden,Kari Traestak - Norway,The Syojatar - Finland,Poropuka - Finland,Chernushka - Russia,The 3 Sisters - Czech,Popelusa - Hungary,The Golden Apple - Croatia,Papalluga - Serbia,Fatima - Iran,Hausa- Nigeria,Fenda Maria (Kamaria)- Angola,Bapkhadi- India,Ye Xian - China,Benizara & Kakezara- Japan,Maria&Lukban-Phillipines,Maria-Chile
+Name means ash,0,0,1,1,1,1,0,0,0,1,0,0,0,1,1,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0
+Herroine is persecuted,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+Slavery,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0
+Picking of lentils or beans,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,0,1,1,0,0,0,0,0,0,0
+Weaving/spinning,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0
+Cannabolism,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0
+Cruel Stepmother or Stepsisters,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1
+"Herroine kills stepmother, sister",0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Herroine arranges marriage to stepmother,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+Weak father or absent,0,0,1,0,1,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,1,1,1,1,0,1
+Magical animal,1,0,1,0,1,0,1,1,0,1,1,1,0,0,1,1,1,0,1,1,0,1,1,1,1,1,0,1,0,1,1
+Magical fairy (female or male),0,0,1,1,0,1,0,1,1,1,0,0,1,1,0,0,0,1,0,0,0,0,0,1,0,1,0,1,1,1,1
+Father's gift of a branch,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Herroine curses ship,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Drops of Blood,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bury Bones,0,1,0,0,1,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0
+Entrails,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,1
+Prince/King Marries Heroine,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1
+Prince causes Shoe to be left,0,0,0,0,1,0,1,0,1,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,0,0,0,0
+Shoe,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,1,1
+Birds/animal speak to prince/king,0,0,0,0,1,0,1,0,0,1,1,1,1,1,1,1,0,0,1,1,0,0,1,1,0,0,0,0,0,1,1
+Sisters Cut feet to fit slippers,0,0,0,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0
+The number 3 is significant,0,0,0,1,1,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0
+Action in Castle,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,0,1,0,1,0,0,1,0,1,0,0,0,1,1
+Action in Church,0,1,0,0,0,0,1,0,1,1,1,1,0,1,1,1,0,1,0,1,0,0,1,0,0,1,1,0,0,1,0
+Action in Carriage,0,0,1,1,0,1,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,0
+Cruel people change,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0
+Cruel people are physically punished,0,0,0,0,1,0,0,1,1,0,0,0,1,0,0,0,1,0,1,1,0,0,0,1,0,1,0,1,0,1,0
+Princes fight for the heroine,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Promise fairy son(s),0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Birch or other tree,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,1,0,0,0,1,0,1,0,1,0
+Ran out of time,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Extended story about children,0,1,0,0,1,0,0,0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,1,0
+Story #,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31
+Total # of ones,5,9,15,10,18,11,12,14,12,11,9,10,11,14,14,11,15,13,14,13,9,10,13,12,5,13,7,11,6,15,11
