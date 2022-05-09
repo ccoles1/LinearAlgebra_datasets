@@ -81,5 +81,3 @@ observations = c("A","E","R")
 viterbi = viterbi(hmm,observations)
 print(viterbi)
 
-#writes the entire bigram for future use
-write.csv(bigram_counts, "C:/Users/ccoles/Dropbox/linear_databook/stockmarket/bigram.csv")
