@@ -9,7 +9,7 @@ import re
 
 np.set_printoptions(suppress=True)#suppresses scinotation
 data = pd.read_csv('tweets.csv')
-market=pd.read_csv('s_n_p_data_1920.csv')
+market=pd.read_csv('s_n_p_data1920.csv')
 m=np.array(data)
 mydata=np.zeros(9)
 #extracting the date from tweet
