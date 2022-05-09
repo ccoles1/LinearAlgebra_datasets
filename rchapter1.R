@@ -1,5 +1,5 @@
 require(matrixcalc)#install this package
-data<-read.csv(file="C:/Users/ccoles/Dropbox/linear_databook/sportsranking/project1sports.csv",header = FALSE,sep = ",")
+data<-read.csv(file="project1sports.csv",header = FALSE,sep = ",")
 mat <- as.matrix(data)#make sure your data is a matrix
 #mat tells the scores of each game
 #we will create sec to show score differential
