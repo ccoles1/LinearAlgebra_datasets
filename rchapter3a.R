@@ -1,6 +1,6 @@
 require(matrixcalc)#install this package
 library(factoextra)#install this package
-data<-read.csv(file="C:/Users/ccoles/Dropbox/linear_databook/digitalhumanities/starhusbandbook.csv",header = FALSE,sep = ",")
+data<-read.csv(file="starhusbandbook.csv",header = FALSE,sep = ",")
 mat <- as.matrix(data)#make sure your data is a matrix
 #we will a matrix without the titles
 starhusband<-matrix(0,nrow(mat)-2,ncol(mat)-2)
