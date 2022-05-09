@@ -4,7 +4,7 @@ require(matrixcalc)#install this package
 #install.packages('HMM')
 library(gtools)
 library(factoextra)#install this package
-data<-read.csv(file="C:/Users/ccoles/Dropbox/linear_databook/stockmarket/marketdata1920.csv",header = FALSE,sep = ",")
+data<-read.csv(file="s_n_p_data1920.csv",header = FALSE,sep = ",")
 mat <- as.matrix(data)#make sure your data is a matrix
 binarymarket<-matrix(0,nrow(mat)-2,3)
 for(i in 1:nrow(binarymarket)){
@@ -42,7 +42,7 @@ library(xml2)
 library(rvest)
 library(stringr)
 library(tidyr)
-f<-read.csv(file="C:/Users/ccoles/Dropbox/linear_databook/stockmarket/tweets.csv",header = FALSE,sep = ",")
+f<-read.csv(file="tweets.csv",header = FALSE,sep = ",")
 
 #install.packages('HMM')
 library(HMM)
