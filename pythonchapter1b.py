@@ -3,7 +3,7 @@ import pip
 import pandas as pd
 import numpy as np
 np.set_printoptions(suppress=True)#suppresses scinotation
-data = pd.read_csv('project1c.csv') #save datafile in the same file as your .py file
+data = pd.read_csv('weightedcensussmall.csv') #save datafile in the same file as your .py file
 m=np.array(data)
 
 datamatrix=np.transpose(np.delete(np.transpose(m),0,0))
