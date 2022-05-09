@@ -1,82 +1,44 @@
-#!C:\Python37\python.exe
 import pip
 import pandas as pd
 import numpy as np
-np.set_printoptions(suppress=True)#suppresses scinotation
-data = pd.read_csv('bigram.csv')
-#use data from bigram.csv posted on github for jane austen data
-m=np.array(data)
+import math
+import matplotlib.pyplot as plt
+from scipy.interpolate import lagrange
+x=np.array([1,2,3,4,5,6,7,8,9])
+y=np.array([659.96,624.43,601.68,625.68,552.13,459.89,477.64,560.08,567.51])
+# Lagrange interpolant
+plt.plot(x,y,'ro')
+poly = lagrange(x, y)
+xi = np.linspace(1,9, 200)
+plt.plot(xi,poly(xi))
+print(poly)
+#Chebyshev interpolant
+xnodes=np.zeros([8])
+unodes=xnodes
+for k in range(0,8):
+    xnodes[k]=np.cos((2*k+1)*np.pi/16)
+x=xnodes
+u=4*x+5
+c=np.zeros([8])
+sum=0;
+for i in range(0,8):
+    t=[0]*i
+    t.append(1)
+    cheb = np.polynomial.chebyshev.Chebyshev(t)
+    if i==0:
+        c[i]=np.dot(poly(u),cheb(x))/8
+    else:
+        c[i]=2*np.dot(poly(u),cheb(x))/8
+coef=np.zeros([7])
+for i in range(0,7):
+    t=[0]*i
+    t.append(1)
+    cheb = np.polynomial.chebyshev.Chebyshev(t)
+    for j in range(len(np.polynomial.chebyshev.cheb2poly(cheb.coef))):
+        coef[j] = np.polynomial.chebyshev.cheb2poly(cheb.coef)[j]
+    sum=sum+c[i]*coef
 
-num_rows, num_cols=m.shape
-wordlist=["miss","anne","poor","marianne","when","replied","with","felt","jane","appeared","cried","but"]
-T=np.zeros((len(wordlist),len(wordlist)))
-
-for i in range(0,num_rows):
-    if m[i][1] in wordlist and m[i][2] in wordlist:
-        T[wordlist.index(m[i][2])][wordlist.index(m[i][1])]=m[i][3]
-num_rows,num_cols=T.shape
-for i in range(0,num_rows):
-    if sum(T[i])!=0:
-        T[i]=T[i]/sum(T[i])
-initialword="marianne"
-sentence=initialword
-initial=np.zeros(len(wordlist))
-initial[wordlist.index(initialword)]=1
-for i in range(0,3):
-    ranking=np.linalg.matrix_power(T,i+1).dot(initial)
-    sentence=sentence.__add__(" ")
-    sentence=sentence.__add__(wordlist[ranking.argmax()])
-print(sentence)
-#autocorrect part of case study
-def forward(V, a, b, initial_distribution):
-    alpha = np.zeros((V.shape[0], a.shape[0]))
-    alpha[0, :] = initial_distribution * b[:, V[0]]
- 
-    for t in range(1, V.shape[0]):
-        for j in range(a.shape[0]):
-            alpha[t, j] = alpha[t - 1].dot(a[:, j]) * b[j, V[t]]
- 
-    return alpha
-
-def backward(V, a, b):
-    beta = np.zeros((V.shape[0], a.shape[0]))
-
-    beta[V.shape[0] - 1] = np.ones((a.shape[0]))
-    for t in range(V.shape[0] - 2, -1, -1):
-        for j in range(a.shape[0]):
-            beta[t, j] = (beta[t + 1] * b[:, V[t + 1]]).dot(a[j, :])
- 
-    return beta
- 
-
- 
- 
-#Initialise HMM
-observations=('A','E','R')
-V=np.array((0,1,3))
-states = ('A', 'E','L','R')
-hiddenstates=" "
-transition_prob = np.array(((.1,.29,.33,.21),(.17,.18,.40,.36),(.28,.21,.27,.29),(.45,.32,0,.14)))
-emission_prob=transition_prob
-start_prob=np.array((3/4,1/8,0,1/16))
-alpha = forward(V, np.transpose(transition_prob), np.transpose(emission_prob), start_prob)
-print("alpha")
-print(alpha)
-beta = backward(V, np.transpose(transition_prob), np.transpose(emission_prob))
-print("beta")
-print(beta)
-print("gamma")
-gamma=alpha[0]*beta[0]/alpha[0].dot(beta[0])
-print(gamma)
-hiddenstates=hiddenstates.__add__(states[gamma.argmax()])
-
-for i in range(1,3):
-    index=gamma.argmax()
-    gamma=alpha[i]*beta[i]/alpha[i].dot(beta[i])
-    print(gamma)
-    p=(np.transpose(emission_prob)[index]*gamma)
-    hiddenstates=hiddenstates.__add__(states[p.argmax()])
-print("hiddenstates ",hiddenstates)
-
-
-        
+sum=np.flip(sum)
+chebpoly=np.poly1d(sum)
+print(chebpoly)
+plt.plot(xi,chebpoly((xi-5)/4))
