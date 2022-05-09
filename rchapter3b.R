@@ -1,7 +1,7 @@
 require(matrixcalc)#install this package
 require(MASS)
 library(factoextra)#install this package
-data<-read.csv(file="C:/Users/ccoles/Dropbox/linear_databook/facialrecognition/faces.csv",header = FALSE,sep = ",")
+data<-read.csv(file="faces.csv",header = FALSE,sep = ",")
 mat <- as.matrix(data)#make sure your data is a matrix
 #we will a matrix without the titles
 faces<-matrix(0,nrow(mat)-2,ncol(mat)-2)
