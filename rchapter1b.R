@@ -1,6 +1,6 @@
 
 require(matrixcalc)#install this package
-data<-read.csv(file="C:/Users/ccoles/Dropbox/linear_databook/gerrymandering/project1c.csv", 
+data<-read.csv(file="filename.csv", 
              header = FALSE,sep = ",")
 mat <- as.matrix(data)#make sure your data is a matrix
 datamatrix<-mat[,2:ncol(mat)]
