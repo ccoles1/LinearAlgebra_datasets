@@ -1,6 +1,8 @@
-library(matlib)
-require(rSymPy)
-library(factoextra)
+install.packages('devtools')
+library('devtools')
+library('matlib')
+require('rSymPy')
+library('factoextra')
 # Table 4.6 Data
 A<-matrix(c(1,37.5,57.21,9.5, 1,6.83,36.33,5.7, 1,11.25,38.32,4.8, 1,28.21,41.86,72.6),nrow
            =4,byrow=TRUE)
