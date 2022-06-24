@@ -12,3 +12,13 @@ x<- c(6.6, 12, 15, 58.5)
 n<- length(x)
 q<-matrix(0, n, n)
 q[,1]<- c(45.6, 105.5, 69.7, 53.5)
+f<- as.character(round(q[1,1], 4))
+fi<- ''
+for (i in 2:n) {
+  for (j in i:n) {
+    q[j,i]<- (q[j,i-1] - q[j-1,i-1]) / (x[j] - x[j-i+1])
+  }
+  fi<- paste(fi, '*(x - ', x[i-1], ')', sep = '', collapse = '')
+  f<- paste(f, '+', round(q[i,i], 4), fi, sep = '', collapse = '')
+}
+print(f)
