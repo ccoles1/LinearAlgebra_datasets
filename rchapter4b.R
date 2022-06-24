@@ -38,3 +38,5 @@ for(i in 1:nrow(div)){
     else{div[[i,j]]=(b[[i]]-mean(b))/sd(b)}
   }
 }
+div.pca<- prcomp(div,scale = TRUE)
+fviz_pca_ind(div.pca)
