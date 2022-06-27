@@ -1,17 +1,17 @@
-require(matrixcalc)#install this package
+require('matrixcalc')#install this package
 #install.packages('janeaustenr')
 #install.packages('dplyr')
 #install.packages('tidytext')
 #install.packages('text2vec')
 #install.packages('HMM')
 
-library(text2vec)
-library(janeaustenr)
-library(dplyr)
-library(stringr)
-library(tidytext)
-library(tidyr)
-library(HMM)
+library('text2vec')
+library('janeaustenr')
+library('dplyr')
+library('stringr')
+library('tidytext')
+library('tidyr')
+library('HMM')
 wordlist <-c("miss","anne","poor","marianne","when","replied","with","felt","jane","appeared","cried","but")
 original_books <- austen_books() %>%
   group_by(book) %>%
