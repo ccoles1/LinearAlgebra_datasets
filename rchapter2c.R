@@ -1,4 +1,4 @@
-require(matrixcalc)#install this package
+require('matrixcalc')#install this package
 #require(MASS)
 #install.packages('gtools')
 #install.packages('HMM')
