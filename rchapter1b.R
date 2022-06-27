@@ -1,5 +1,5 @@
 
-require(matrixcalc)#install this package
+require('matrixcalc')#install this package
 data<-read.csv(file="weightedcensussmall.csv", 
              header = FALSE,sep = ",")
 mat <- as.matrix(data)#make sure your data is a matrix
