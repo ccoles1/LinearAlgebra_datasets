@@ -1,6 +1,6 @@
-require(matrixcalc)#install this package
-require(MASS)
-library(factoextra)#install this package
+require('matrixcalc')#install this package
+require('MASS')
+library('factoextra')#install this package
 data<-read.csv(file="faces.csv",header = FALSE,sep = ",")
 mat <- as.matrix(data)#make sure your data is a matrix
 #we will a matrix without the titles
