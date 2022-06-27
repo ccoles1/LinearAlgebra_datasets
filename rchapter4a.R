@@ -8,7 +8,7 @@ A <- matrix(c(1,2,3,4),nrow = 2, ncol = 2, byrow = TRUE)
 print(A)
 encryption<-A%*%M%%29
 print(encryption)
-decryption<-inv(A)%*%encryption%%29
+decryption<-matrix.inverse(A)%*%encryption%%29
 print(decryption)
 
 # Public Key Encryption using Chebyshev Polynomials
