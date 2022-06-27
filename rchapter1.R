@@ -1,4 +1,5 @@
-require(matrixcalc)#install this package
+install.packages('matrixcalc')
+library('matrixcalc')
 data<-read.csv(file="project1sports.csv",header = FALSE,sep = ",")
 mat <- as.matrix(data)#make sure your data is a matrix
 #mat tells the scores of each game
