@@ -1,3 +1,5 @@
+install.packages('matrixcalc')
+library('matrixcalc')
 cases <- matrix(c(607,576,638,615,655,536,358,539,432,460,445,428,448,367,470,401))
 x<-matrix(0, length(cases))
 y<-matrix(0, length(x))
