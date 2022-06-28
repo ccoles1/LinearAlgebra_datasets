@@ -21,10 +21,9 @@ for i in range(209455,len(m)):
 guess='zesty'
 index = [0,1,2,3,4,5]
 countmatch=np.zeros([6,6])
-matches=list()
 for i in range(0,6):
     for j in range(0,6):
-        matches.append([i,j])
+        temp.append([i,j])
 for i in range(0,len(temp)):
     check1=0
     check2=0
