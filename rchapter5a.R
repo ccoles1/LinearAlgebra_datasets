@@ -23,8 +23,22 @@ for (j in 1:length(subscriptlist)){
  }
 train<-t(train)
 
-def phi(x):
+phi <- function(x){
 #sigmoid activation function
-    return 1/(1+math.exp(-x))
+      return(1/(1+exp(-x)))
 # hyperbolic tan activation function
-#    return np.tanh(x)
+#    return(tanh(x))
+}
+phiprime<-function(x){
+#derivative of sigmoid activation function
+    return(exp(-x)/((1+exp(-x))*(1+exp(-x))))
+# derivative hyperbolic tan activation function
+# return(1/cosh(x)*1/cosh(x))
+}
+softmax<-function(x){
+    return(exp(x)/sum(exp(x)))
+}
+cross_entropy<-function(actual, predicted){
+    loss<-sum(actual*log(predicted))
+    return(loss)
+}
