@@ -9,6 +9,7 @@ m=np.array(data)
 ncol=m.shape[0]
 m=m[:,0:ncol]
 temp=list()
+matches=list()
 for i in range(0,209453):
     if len(m[i,0])==5:
         temp.append(m[i,0])
@@ -23,7 +24,7 @@ index = [0,1,2,3,4,5]
 countmatch=np.zeros([6,6])
 for i in range(0,6):
     for j in range(0,6):
-        temp.append([i,j])
+        matches.append([i,j])
 for i in range(0,len(temp)):
     check1=0
     check2=0
