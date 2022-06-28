@@ -14,9 +14,12 @@ w<-matrix(0, 15)
 for (i in 1:15){
     w[i]=1/15
 }
-train<-matrix(0,length(subscriptlist),64])
+train<-matrix(0,length(subscriptlist),63)
 for (j in 1:length(subscriptlist)){
-        train[j]=X[subscriptlist[j]]
+        row<-subscriptlist[j]+1
+        for (i in 1:ncol(X)){
+            train[j,i]=X[row,i]
+        }
  }
 train<-t(train)
 
