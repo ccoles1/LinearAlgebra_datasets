@@ -58,7 +58,7 @@ for (time in 1:1200){
     ev <-eigen(H1)
     elist<-append(elist, mean((values <- ev$values)))
     ev<-eigen(Stime)
-    mlist<-append(mlist, max(mean((values <- ev$values))))
+    mlist<-append(mlist, max((values <- ev$values)))
     ev<-eigen(W)
     flist<-append(flist, mean((values <- ev$values)))
     avg = append(avg, mean(Stime[1,]))
