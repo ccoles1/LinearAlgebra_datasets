@@ -35,3 +35,23 @@ for i in range(1,len(returnAAL)-1):
   A[3, i]=np.log(returndAL[i + 1]/returndAL[i])
   A[4, i]=np.log(returnEQR[i + 1]/returnEQR[i])
   A[5, i]=np.log(returnUAL[i + 1]/returnUAL[i])
+
+elist =[]
+mlist = []
+flist = []
+avg = []
+for time in range(0,1200):
+    Temp=np.zeros((6,6))
+    for i in range(0,6):
+        for j in range(0,6):
+            Temp[i,j]=A[i,j+time-1]
+    W=Temp.dot(np.transpose(Temp))/np.sqrt(2*6)
+    Stime=np.transpose(Temp).dot(Temp)/np.sqrt(2*6)
+    H1=(W + np.transpose(W))/6
+    w,v=np.linalg.eig(H1)
+    elist=np.append(elist, np.mean(v))
+    w,v=np.linalg.eig(Stime)
+    mlist=np.append(mlist, np.max(v))
+    w,v=np.linalg.eig(W)
+    flist=np.append(flist, np.mean(v))
+    avg = np.append(avg, np.mean(Stime[1]))
