@@ -15,14 +15,10 @@ for (i in 1:length(m)){
 #guess='tares'
 #guess='saree'
 guess='zesty'
-matches<-list()
+
 index <-matrix(c(0,1,2,3,4,5))
 countmatch<-matrix(0,6,6)
-for (i in 1:6){
-    for (j in 1:6){
-        matches<-append(matches,c(i,j))
-        }
-    }
+
 for (i in 1:length(temp)){
     check1<-0
     check2<-0
