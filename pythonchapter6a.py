@@ -64,3 +64,18 @@ for (time in 1:1200){
     avg = append(avg, mean(Stime[1]))
 }
 hist(unlist(flist),main="eigenvalues of correlation matrix")
+
+#average 7 day
+
+avg1<-list()
+avg2<-list()
+temp<-matrix(0,30)
+temp1<-matrix(0,30)
+for (time in 1:1090){
+    for (i in 1:30){
+      temp[i]<-avg[i - 1 + time]
+      temp1[i]<-mlist[i - 1 + time]
+        }
+  avg1<-append(avg1,mean(temp))
+  avg2<-append(avg2,mean(temp1))
+}
