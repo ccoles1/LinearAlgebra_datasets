@@ -1,3 +1,7 @@
+#choose a training set, this will include 20 calls, at least 4 samples from sri lanka jungle fowl
+indices=[]
+for i in range (0,16):
+  indices=np.append(indices,random.randint(0, n))
 Temp = Table[0, {i, 1, 2}, {j, 1, 60}];
 elist = {};
 For[i = 1, i <= 100000 - 60,
