@@ -39,3 +39,27 @@ for (i in 1:length(returnAAL)-1){
   A[5, i]<-log(as.numeric(returnEQR[i + 1])/as.numeric(returnEQR[i]))
   A[6, i]<-log(as.numeric(returnUAL[i + 1])/as.numeric(returnUAL[i]))
 }
+
+elist =list()
+mlist = list()
+flist = list()
+avg = list()
+
+for (time in 1:1200){
+    Temp<-matrix(0,6,6)
+    for (i in 1:6){
+        for (j in 1:6){
+            Temp[i,j]<-A[i,j+time-1]
+            }
+        }
+    S<-Temp%*%t(Temp)/sqrt(2*6)
+    Stime<-t(Temp)%*%Temp/sqrt(2*6)
+    H1<-(S + t(S))/6;
+    ev <-eigen(H1)
+    elist<-append(elist, mean((values <- ev$values)))
+    ev<-eigen(Stime)
+    mlist<-append(mlist, max(mean((values <- ev$values))))
+    ev<-eigen(S)
+    flist<-append(flist, mean((values <- ev$values)))
+    avg = append(avg, mean(Stime[1]))
+}
