@@ -21,7 +21,7 @@ for (i in 2:600000){
         returnUAL<-append(returnUAL, mat[i, 5])
         }
     if (mat[i, 7] == "CBG"){
-        returnCBG<-append(returnCBG, t1[i, 5])
+        returnCBG<-append(returnCBG, mat[i, 5])
         }
     if (mat[i, 7] == "EQR"){
         returnEQR<-append(returnEQR, mat[i, 5])
