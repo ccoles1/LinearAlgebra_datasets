@@ -29,3 +29,13 @@ for (i in 2:600000){
     }
 x<-1:length(returnAAL)
 plot(x,returnAAL)
+
+A<-matrix(0,6,length(returnAAL)-1)
+for (i in 1:length(returnAAL)-1){
+  A[1, i]<-log(as.numeric(returnAAL[i + 1])/as.numeric(returnAAL[i]))
+  A[2, i]<-log(as.numeric(returnABBV[i + 1])/as.numeric(returnABBV[i]))
+  A[3, i]<-log(as.numeric(returnCBG[i + 1])/as.numeric(returnCBG[i]))
+  A[4, i]<-log(as.numeric(returndAL[i + 1])/as.numeric(returndAL[i]))
+  A[5, i]<-log(as.numeric(returnEQR[i + 1])/as.numeric(returnEQR[i]))
+  A[6, i]<-log(as.numeric(returnUAL[i + 1])/as.numeric(returnUAL[i]))
+}
