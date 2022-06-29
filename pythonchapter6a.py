@@ -24,3 +24,14 @@ for i in range(1,600000):
         returnCBG=np.append(returnCBG, mat[i, 4])
     if mat[i, 6] == "EQR":
         returnEQR=np.append(returnEQR, mat[i, 4])
+x=np.arange(0,len(returnAAL))
+plt.scatter(x,returnAAL)
+
+A=np.zeros((6,len(returnAAL)-1))
+for i in range(1,len(returnAAL)-1):
+  A[0, i]=np.log(returnAAL[i + 1]/returnAAL[i])
+  A[1, i]=np.log(returnABBV[i + 1]/returnABBV[i])
+  A[2, i]=np.log(returnCBG[i + 1]/returnCBG[i])
+  A[3, i]=np.log(returndAL[i + 1]/returndAL[i])
+  A[4, i]=np.log(returnEQR[i + 1]/returnEQR[i])
+  A[5, i]=np.log(returnUAL[i + 1]/returnUAL[i])
