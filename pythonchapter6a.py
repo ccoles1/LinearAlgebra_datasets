@@ -61,7 +61,7 @@ for (time in 1:1200){
     mlist<-append(mlist, max(mean((values <- ev$values))))
     ev<-eigen(W)
     flist<-append(flist, mean((values <- ev$values)))
-    avg = append(avg, mean(Stime[1]))
+    avg = append(avg, mean(Stime[1,]))
 }
 hist(unlist(flist),main="eigenvalues of correlation matrix")
 
@@ -76,6 +76,11 @@ for (time in 1:1090){
       temp[i]<-avg[i - 1 + time]
       temp1[i]<-mlist[i - 1 + time]
         }
-  avg1<-append(avg1,mean(temp))
-  avg2<-append(avg2,mean(temp1))
+  avg1<-append(avg1,mean(unlist(temp)))
+  avg2<-append(avg2,mean(unlist(temp1)))
 }
+
+x<-1:length(avg1)
+y<-10*unlist(avg1)
+plot(x,y,col="blue",xlab='time',ylab='eigenvalues of covariance matrix')
+plot(x,avg2,col="red",xlab='time',ylab='maximum eigenvalues')
