@@ -54,7 +54,7 @@ for (time in 1:1200){
         }
     W<-Temp%*%t(Temp)/sqrt(2*6)
     Stime<-t(Temp)%*%Temp/sqrt(2*6)
-    H1<-(S + t(S))/6;
+    H1<-(W + t(W))/6;
     ev <-eigen(H1)
     elist<-append(elist, mean((values <- ev$values)))
     ev<-eigen(Stime)
