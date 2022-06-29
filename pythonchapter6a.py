@@ -33,6 +33,22 @@ for i in range(1,len(returnAAL)-1):
   A[1, i]=np.log(returnABBV[i + 1]/returnABBV[i])
   A[2, i]=np.log(returnCBG[i + 1]/returnCBG[i])
   A[3, i]=np.log(returndAL[i + 1]/returndAL[i])
+    
+plt.hist(flist)
+
+#average 7 day
+
+avg1=[]
+avg2=[]
+temp=np.zeros(30)
+temp1=np.zeros(30)
+for time in range(0,1090):
+    for i in range(0,30):
+        temp[i]=avg[i - 1 + time]
+        temp1[i]=mlist[i - 1 + time]
+        avg1=np.append(avg1,np.mean(temp))
+        avg2=np.append(avg2,np.mean(temp1))
+       
   A[4, i]=np.log(returnEQR[i + 1]/returnEQR[i])
   A[5, i]=np.log(returnUAL[i + 1]/returnUAL[i])
 
