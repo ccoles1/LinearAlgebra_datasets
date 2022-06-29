@@ -52,14 +52,15 @@ for (time in 1:1200){
             Temp[i,j]<-A[i,j+time-1]
             }
         }
-    S<-Temp%*%t(Temp)/sqrt(2*6)
+    W<-Temp%*%t(Temp)/sqrt(2*6)
     Stime<-t(Temp)%*%Temp/sqrt(2*6)
     H1<-(S + t(S))/6;
     ev <-eigen(H1)
     elist<-append(elist, mean((values <- ev$values)))
     ev<-eigen(Stime)
     mlist<-append(mlist, max(mean((values <- ev$values))))
-    ev<-eigen(S)
+    ev<-eigen(W)
     flist<-append(flist, mean((values <- ev$values)))
     avg = append(avg, mean(Stime[1]))
 }
+hist(unlist(flist),main="eigenvalues of correlation matrix")
