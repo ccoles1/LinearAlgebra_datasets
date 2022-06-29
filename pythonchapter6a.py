@@ -71,3 +71,8 @@ for time in range(0,1200):
     w,v=np.linalg.eig(W)
     flist=np.append(flist, np.mean(v))
     avg = np.append(avg, np.mean(Stime[1]))
+
+x=np.arange(0,len(avg1))
+y=2000*avg1
+plt.scatter(x,y,color='b')
+plt.plot(x,avg2,color='r')
