@@ -36,3 +36,17 @@ for (i in 1:length(temp)){
         }
     countmatch[check2,check1]<-countmatch[check2,check1]+1
 }
+
+# showing the probability distribution of outcomes for the given guess
+prob<-countmatch/length(temp)
+sorted<-sort(as.vector(prob),decreasing=TRUE)
+barplot(sorted)
+
+# determining the entropy based on the probability distribution of the outcomes
+entropy<-0
+for (k in 1:length(sorted)){
+    if (sorted[k]>0){
+        entropy<-entropy-sorted[k]*log2(sorted[k])
+        }
+    }
+print(entropy)
