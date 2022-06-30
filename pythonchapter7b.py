@@ -5,6 +5,7 @@ import random
 import matplotlib.pyplot as plt
 from scipy.fft import fft, ifft
 data = pd.read_csv('birdcalls.csv')
+#birdcalls.csv is located in birdcallsupdated.zip 
 mat=np.array(data)
 
 decision=[]
