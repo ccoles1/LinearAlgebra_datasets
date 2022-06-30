@@ -51,3 +51,12 @@ yconstraints=[]
 yconstraints=np.append(yconstraints,[np.min(jfypeaks),np.max(jfypeaks)])
 
 #now a test case from the jungle fowl data
+decision=[]
+birdcall=mat[:,int(random.randint(col1, col2))]
+f=np.abs(fft(birdcall))
+x=sort_index(f)[0]/1000
+y=(sort_index(f)[1]-sort_index(f)[0])/sort_index(f)[0]
+if x > xconstraints[0] and x < xconstraints[1] and y > yconstraints[0] and y < yconstraints[1]:
+    decision=np.append(decision,True)
+else:
+    decision=np.append(decision,False)
