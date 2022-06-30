@@ -20,10 +20,13 @@ ypeaks=[]
 n=10
 for i in range (0,16):
   indices=np.append(indices,random.randint(0, n))
-birdcall=mat[:,1]
   
 # the data in birdcalls.zip are from audio calls, we will be looking at discrete fourier transforms of these calls.
-f=np.abs(fft(birdcall))
-xpeaks=np.append(xpeaks,sort_index(f)[0])
-ypeaks=np.append(xpeaks,sort_index(f)[1])
+for i in range(0,len(indices)):
+    birdcall=birdcall=mat[:,i]
+    f=np.abs(fft(birdcall))
+    xpeaks=np.append(xpeaks,sort_index(f)[0])
+    ypeaks=np.append(ypeaks,sort_index(f)[1])
+
+plt.scatter(xpeaks,ypeaks)
 
