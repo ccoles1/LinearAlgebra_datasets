@@ -26,7 +26,7 @@ col2=7
 for i in range (0,n):
   indices=np.append(indices,random.randint(0, col1-1))
 for i in range (0,n):
-  indices=np.append(indices,random.randint(col2+1,mat.shape[1]))
+  indices=np.append(indices,random.randint(col2+1,mat.shape[1]-1))
 for i in range (0,jfn):
   jfindices=np.append(jfindices,random.randint(col1, col2))
   
@@ -36,6 +36,18 @@ for i in range(0,len(indices)):
     f=np.abs(fft(birdcall))
     xpeaks=np.append(xpeaks,sort_index(f)[0])
     ypeaks=np.append(ypeaks,sort_index(f)[1])
+for i in range(0,len(jfindices)):
+    birdcall=mat[:,int(jfindices[i])]
+    f=np.abs(fft(birdcall))
+    jfxpeaks=np.append(jfxpeaks,sort_index(f)[0]/1000)
+    jfypeaks=np.append(jfypeaks,(sort_index(f)[1]-sort_index(f)[0])/sort_index(f)[0])
 
 plt.scatter(xpeaks,ypeaks)
+plt.scatter(jfxpeaks,jfypeaks,color='r')
 
+xconstraints=[]
+xconstraints=np.append(xconstraints,[np.min(jfxpeaks),np.max(jfxpeaks)])
+yconstraints=[]
+yconstraints=np.append(yconstraints,[np.min(jfypeaks),np.max(jfypeaks)])
+
+#now a test case from the jungle fowl data
