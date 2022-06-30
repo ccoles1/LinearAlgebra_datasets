@@ -18,8 +18,17 @@ indices=[]
 xpeaks=[]
 ypeaks=[]
 n=10
-for i in range (0,16):
-  indices=np.append(indices,random.randint(0, n))
+jfn=4
+
+#Sri Lankan Jungle fowl bird calls are between col1 and col2
+col1=3
+col2=7
+for i in range (0,n):
+  indices=np.append(indices,random.randint(0, col1-1))
+for i in range (0,n):
+  indices=np.append(indices,random.randint(col2+1,len(mat)))
+for i in range (0,jfn):
+  jfindices=np.append(jfindices,random.randint(col1, col2))
   
 # the data in birdcalls.zip are from audio calls, we will be looking at discrete fourier transforms of these calls.
 for i in range(0,len(indices)):
