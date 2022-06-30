@@ -18,9 +18,10 @@ def sort_index(lst, rev=True):
 n=10
 jfn=4
 
-#Sri Lankan Jungle fowl bird calls are between col1 and col2, in the dataset Sri Lankan Jungle fowl are in columns 
-col1=3
-col2=7
+#Sri Lankan Jungle fowl bird calls are between col1 and col2, in the dataset Sri Lankan Jungle fowl are in columns 17 to 31
+col1=17
+col2=31
+# 5 decision tree runs are made but more can be done.
 for run in range(0,5):
     indices=[]
     jfindices=[]
