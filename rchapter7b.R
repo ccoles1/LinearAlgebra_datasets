@@ -53,3 +53,15 @@ for (i in 1:length(jfindices)){
     yconstraints<-append(yconstraints,min(jfypeaks))
     yconstraints<-append(yconstraints,max(jfypeaks))
 }
+
+#now a test case from the jungle fowl data
+    birdcall=mat[,sample(col1:col2,1,replace=F)]
+    f=abs(fft(birdcall))
+    x=sort_index(f)[1]/1000
+    y=(sort_index(f)[2]-sort_index(f)[1])/sort_index(f)[1]
+    if ((x > xconstraints[1]) & (x < xconstraints[2]) & (y > yconstraints[1]) & (y < yconstraints[2])){
+        decision<-append(decision,1)
+        } else {
+        decision<-append(decision,0)
+    }
+    
