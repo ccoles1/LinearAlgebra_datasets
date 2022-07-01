@@ -11,8 +11,8 @@ for(i in 1:nrow(X)){
 
 decision<-list()
 
-sort_index<-function(lst){
-    s<-sort(x, index.return=TRUE)
+sort_index<-function(x){
+    s<-sort(x, index.return=TRUE)$ix
     return(s)
 }
 
@@ -34,3 +34,10 @@ indices1<-sample(1:col1, n, replace=F)
 indices2<-sample(col2:ncol(mat),n,replace=F)
 indices<-c(indices1,indices2)
 jfindices=sample(col1:col2,jfn,replace=F)
+
+for (i in 1:length(indices)){
+    birdcall<-mat[,indices[i]]
+    f<-abs(fft(birdcall))
+    xpeaks<-append(xpeaks,sort_index(f)[1]/1000)
+    ypeaks<-append(ypeaks,(sort_index(f)[2]-sort_index(f)[1])/sort_index(f)[1])
+}
