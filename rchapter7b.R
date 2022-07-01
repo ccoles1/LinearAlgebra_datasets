@@ -26,8 +26,7 @@ indices<-list()
 jfindices<-list()
 xpeaks<-list()
 ypeaks<-list()
-jfxpeaks<-list()
-jfypeaks<-list()
+
 xconstraints<-list()
 yconstraints<-list()
 indices1<-sample(1:col1, n, replace=F)
@@ -40,4 +39,17 @@ for (i in 1:length(indices)){
     f<-abs(fft(birdcall))
     xpeaks<-append(xpeaks,sort_index(f)[1]/1000)
     ypeaks<-append(ypeaks,(sort_index(f)[2]-sort_index(f)[1])/sort_index(f)[1])
+}
+
+jfxpeaks<-matrix(0,length(jfindices))
+jfypeaks<-matrix(0,length(jfindices))
+for (i in 1:length(jfindices)){
+    birdcall<-mat[,jfindices[i]]
+    f<-abs(fft(birdcall))
+    jfxpeaks[i]<-sort_index(f)[1]/1000
+    jfypeaks[i]<-(sort_index(f)[2]-sort_index(f)[1])/sort_index(f)[1]
+    xconstraints<-append(xconstraints,min(jfxpeaks))
+    xconstraints<-append(xconstraints,max(jfxpeaks))
+    yconstraints<-append(yconstraints,min(jfypeaks))
+    yconstraints<-append(yconstraints,max(jfypeaks))
 }
