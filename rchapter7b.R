@@ -1,7 +1,7 @@
 install.packages('matrixcalc')
 library('matrixcalc')
 
-data<-read.csv(file="birdcalls1.csv",header = FALSE,sep = ",")
+data<-read.csv(file="birdcalls.csv",header = FALSE,sep = ",")
 #birdcalls.csv is located in birdcallsupdated.zip
 mat<-as.matrix(data)
 X<-matrix(0,nrow(mat)-2,ncol(mat)-2)
